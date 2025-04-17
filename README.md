@@ -20,6 +20,18 @@ This project implements a real-time safety helmet detection system with the foll
    - Transparency in detection process
    - Trust-building through clear feedback
 
+## Video Examples
+
+### Input Video
+The system processes video input from the `data` directory:
+
+![Input Video](data/video.mp4)
+
+### Output Video
+The processed video with safety helmet detections is saved in the `output` directory:
+
+![Output Video](output/safety_helmet_detection.mp4)
+
 ## Features
 
 ### Detection Features
@@ -84,7 +96,7 @@ pip install torch ultralytics opencv-python numpy
 1. Place your video file in the data folder (you can use video.mp4)
 2. Run the script:
 ```bash
-python human_detector.py
+python helmet_detector.py
 ```
 3. Enter the path to your video file when prompted
 4. Press 'q' to quit the detection window
@@ -131,7 +143,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- Trained Model: [YOLOv3 Helmet Detection by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
+- [YOLOv3 Helmet Detection by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
 - YOLOv3 by Joseph Redmon and Ali Farhadi
 - OpenCV for computer vision capabilities
 - PyTorch for deep learning framework
