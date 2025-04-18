@@ -1,8 +1,7 @@
 # Safety Helmet Detection with Explainable AI
 
-A computer vision system that detects safety helmets in video streams using YOLOv3, enhanced with Explainable AI (XAI) components to improve trust and transparency in model decisions.
+A computer vision system that detects safety helmets in video streams using YOLOv8m, enhanced with Explainable AI (XAI) components to improve trust and transparency in model decisions.
 
-> Based on the [YOLOv3 Helmet Detection implementation by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
 
 ---
 
@@ -37,10 +36,9 @@ The processed video with safety helmet detections is saved in the `output` direc
 ## ⚙️ Features
 
 ### Detection
-- YOLOv3-based model trained for helmet detection
+- YOLOv8m-based model trained for helmet detection
 - Bounding box colors:
-  - 🟩 Green: safety helmets
-  - 🟦 Blue: other detected objects
+  - 🟦 Blue: safety helmets
 - Confidence scores displayed for each detection
 - Only displays frames where humans are detected
 
@@ -66,7 +64,7 @@ The processed video with safety helmet detections is saved in the `output` direc
 ## 🛠️ Technical Overview
 
 ### Architecture
-- YOLOv3-based object detection
+- YOLOv8m-based object detection
 - Custom-trained for helmet detection
 - Lightweight, efficient Python script
 
@@ -117,8 +115,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Acknowledgments
 
-- [YOLOv3 Helmet Detection by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
-- YOLOv3 by Joseph Redmon and Ali Farhadi
+- [YOLOv8m Hard Hat Detection](https://huggingface.co/keremberke/yolov8m-hard-hat-detection/tree/main)
 - OpenCV for computer vision capabilities
 - PyTorch for deep learning framework
 - XAI research community for explainability concepts
