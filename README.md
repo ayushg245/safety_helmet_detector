@@ -1,77 +1,75 @@
 # Safety Helmet Detection with Explainable AI
 
-A computer vision system that detects safety helmets in video streams using YOLOv3, enhanced with Explainable AI (XAI) components for better understanding and trust in the detection process.
+A computer vision system that detects safety helmets in video streams using YOLOv3, enhanced with Explainable AI (XAI) components to improve trust and transparency in model decisions.
 
-[Based on the YOLOv3 Helmet Detection implementation by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
+> Based on the [YOLOv3 Helmet Detection implementation by BlcaKHat](https://github.com/BlcaKHat/yolov3-Helmet-Detection)
 
-## Project Overview
+---
 
-This project implements a real-time safety helmet detection system with the following key components:
+## 📌 Project Overview
 
-1. **Computer Vision System**
-   - Real-time safety helmet detection in video streams
-   - Processes every 10th frame for efficient performance
-   - Visual indicators for safety helmet detection
-   - Confidence scores for each detection
+This system performs real-time safety helmet detection in videos using a YOLOv3-based deep learning model. It incorporates Explainable AI (XAI) components to offer interpretability through visual feedback and confidence scores.
 
-2. **Explainable AI Components**
-   - Model interpretability through confidence scores
-   - Visual explanations of detection decisions
-   - Transparency in detection process
-   - Trust-building through clear feedback
+### Key Highlights
+- Detects helmets and humans with bounding boxes and confidence levels
+- Efficient processing: analyzes every 10th frame
+- Real-time visualization with minimal performance drop
+- Explainable outputs to build user trust
 
-## Video Examples
+## 🎥 Input & Output
+ 
+Place your video in the `data` directory:
+
+Processed video is saved in the `output` directory:
+
+## Result
 
 ### Input Video
 The system processes video input from the `data` directory:
 
 ![Input Video](data/video.mp4)
 
-### Output Video
+### Helmet Detection Output Video
 The processed video with safety helmet detections is saved in the `output` directory:
 
 ![Output Video](output/safety_helmet_detection.mp4)
 
-## Features
+## ⚙️ Features
 
-### Detection Features
-- Real-time safety helmet detection in video streams
-- Processes every 10th frame for efficient performance
-- Visual indicators for safety helmet detection:
-  - Green bounding boxes for detected safety helmets
-  - Blue bounding boxes for other detected objects
-  - Confidence scores displayed for each detection
-- Only displays frames where detections are found
-- Simple user interface with 'q' to quit
+### Detection
+- YOLOv3-based model trained for helmet detection
+- Bounding box colors:
+  - 🟩 Green: safety helmets
+  - 🟦 Blue: other detected objects
+- Confidence scores displayed for each detection
+- Only displays frames where humans are detected
 
-### XAI Features
-- Confidence score visualization
+### Performance
+- Processes every 10th frame to balance speed and accuracy
+- Runs on both CPU and GPU (CUDA-supported)
+- Uses a confidence threshold of 0.35 for reliable detection
+
+---
+
+## 🧠 Explainable AI (XAI) Components
+
+### Model Interpretability
+- Visual bounding boxes
+- Confidence scores on each detection
+- Frame-level feedback for decision reasoning
+
+### Transparency & Trust
 - Clear labeling of detection results
-- Visual feedback for detection decisions
-- Transparent processing pipeline
-- Trust indicators through consistent detection patterns
+- Consistent detection patterns
+- Easy-to-understand visual output
 
-## Technical Implementation
+## 🛠️ Technical Overview
 
-### Model Architecture
-- YOLOv3-based detection system
-- Custom-trained model for safety helmet detection
-- Confidence threshold of 0.35 for reliable detections
-- Frame skipping for efficient processing
+### Architecture
+- YOLOv3-based object detection
+- Custom-trained for helmet detection
+- Lightweight, efficient Python script
 
-### XAI Implementation
-- Confidence score display for each detection
-- Visual bounding boxes with clear labels
-- Processing information feedback
-- Detection decision transparency
-
-## Requirements
-
-- Python 3.8 or higher
-- PyTorch
-- OpenCV
-- Ultralytics (for YOLOv3)
-- CUDA (optional, for GPU acceleration)
 
 ## Installation
 
@@ -93,45 +91,21 @@ pip install torch ultralytics opencv-python numpy
 
 ## Usage
 
-1. Place your video file in the data folder (you can use video.mp4)
+1. Place your video file in the data folder (you can use data/video.mp4 for a trial for this project)
 2. Run the script:
 ```bash
 python helmet_detector.py
 ```
-3. Enter the path to your video file when prompted
+3. Enter the path to your video file when prompted (data/video.mp4)
 4. Press 'q' to quit the detection window
 
 ## Output
 
 The system provides:
 1. Real-time video display with detections
-2. Saved output video in the "output" directory
-3. Visual feedback for each detection
-4. Confidence scores for decision transparency
+2. Processed video saved to output/ directory
+3. Bounding boxes and confidence labels shown for detected objects
 
-## XAI Components
-
-### 1. Model Interpretability
-- Confidence scores for each detection
-- Clear labeling of detection results
-- Visual feedback for detection decisions
-
-### 2. Transparency
-- Processing information display
-- Detection decision explanations
-- Clear visual indicators
-
-### 3. Trust Building
-- Consistent detection patterns
-- Reliable confidence scoring
-- Clear visual feedback
-
-## Performance
-
-- Processes every 10th frame to maintain real-time performance
-- Uses confidence threshold of 0.35 for reliable detections
-- Can run on both CPU and GPU (with CUDA support)
-- Efficient processing with frame skipping
 
 ## Contributing
 
