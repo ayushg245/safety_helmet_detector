@@ -25,16 +25,14 @@ This project implements a real-time safety helmet detection system with the foll
 ### Input Video
 The system processes video input from the `data` directory:
 
-<video width="640" height="360" controls>
-  <source src="data/video.mp4" type="video/mp4">
+<video src="data/video.mp4" width="640" height="360" controls>
   Your browser does not support the video tag.
 </video>
 
 ### Output Video
 The processed video with safety helmet detections is saved in the `output` directory:
 
-<video width="640" height="360" controls>
-  <source src="output/safety_helmet_detection.mp4" type="video/mp4">
+<video src="output/safety_helmet_detection.mp4" width="640" height="360" controls>
   Your browser does not support the video tag.
 </video>
 
