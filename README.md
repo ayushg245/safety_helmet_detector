@@ -47,20 +47,14 @@ Explainability helps us visualize what parts of the image the model is actually 
 We tried to dig deep in the last three layers of the model and here are the outputs. 
 
 ### Last Layer:
-<table>
-  <tr>
-    <td><img src="output/Last Layer Output/eigen_cam_last_layer_1.jpg" width="22%"></td>
-    <td><img src="output/Last Layer Output/eigen_cam_last_layer_2.jpg" width="22%"></td>
-    <td><img src="output/Last Layer Output/eigen_cam_last_layer_3.jpg" width="22%"></td>
-    <td><img src="output/Last Layer Output/eigen_cam_last_layer_4.jpg" width="22%"></td>
-  </tr>
-  <tr align="center">
-    <td>Frame 1</td>
-    <td>Frame 2</td>
-    <td>Frame 3</td>
-    <td>Frame 4</td>
-  </tr>
-</table>
+<h3 align="center">🔍 Visualizing Model Focus with EigenCAM (Last Layer)</h3>
+
+<p align="center">
+  <img src="output/Last Layer Output/eigen_cam_last_layer_1.jpg" width="22%" />
+  <img src="output/Last Layer Output/eigen_cam_last_layer_2.jpg" width="22%" />
+  <img src="output/Last Layer Output/eigen_cam_last_layer_3.jpg" width="22%" />
+  <img src="output/Last Layer Output/eigen_cam_last_layer_4.jpg" width="22%" />
+</p>
 
 
 
