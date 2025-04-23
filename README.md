@@ -103,7 +103,7 @@ While the model still **predicts helmets correctly**, the internal reasoning may
 ### 🧠 Why Explainability Matters
 
 This kind of **shortcut learning** — where the model depends on frequently co-occurring but **irrelevant features** — is a well-known behavior in deep learning.  
-Using **Explainable AI techniques like Grad-CAM** helps uncover these hidden dependencies and build **trustworthy, interpretable AI systems**, especially in safety-critical environments.
+Using **Explainable AI techniques like Eigen-CAM** helps uncover these hidden dependencies and build **trustworthy, interpretable AI systems**, especially in safety-critical environments.
 
 
 ## Installation
