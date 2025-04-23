@@ -90,7 +90,7 @@ In a large number of predictions, the model doesn't focus solely on the helmet. 
 
 ---
 
-### ⚠️ What This Means
+### 💡 What This Means
 
 While the model still **predicts helmets correctly**, the internal reasoning may not be reliable:
 
@@ -100,7 +100,7 @@ While the model still **predicts helmets correctly**, the internal reasoning may
 
 ---
 
-### 🧠 Why Explainability Matters
+### 👇 Why Explainability Matters
 
 This kind of **shortcut learning** — where the model depends on frequently co-occurring but **irrelevant features** — is a well-known behavior in deep learning.  
 Using **Explainable AI techniques like Eigen-CAM** helps uncover these hidden dependencies and build **trustworthy, interpretable AI systems**, especially in safety-critical environments.
