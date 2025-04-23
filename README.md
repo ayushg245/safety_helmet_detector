@@ -76,26 +76,34 @@ Explainability helps us visualize what parts of the image the model is actually 
 
 One of the most revealing insights from applying Explainable AI techniques like EigenCAM was observing where the model actually pays attention when detecting safety helmets.
 
-👀 What We Found:
-In a large number of predictions, the model doesn't focus solely on the helmet. Instead, the activation maps frequently light up high-visibility safety vests worn by the same individuals.
+## 👀 What We Found
 
-**This happens because:**
+In a large number of predictions, the model doesn't focus solely on the helmet. Instead, the activation maps frequently light up **high-visibility safety vests** worn by the same individuals.
 
--> Helmets and vests often appear together in training data.
+---
 
--> The model has learned to associate vests as a strong context cue for helmet presence.
+### 🧠 Why This Happens
 
--> As a result, it sometimes relies more on the vest than the helmet itself to make its decision.
+- 🟡 Helmets and vests often appear together in the training data.  
+- 🟡 The model has learned to associate **vests as a strong context cue** for helmet presence.  
+- 🟡 As a result, it sometimes **relies more on the vest** than the helmet itself to make its decision.
 
-✅ The model still predicts helmets correctly, but...
+---
 
-⚠️ It may not truly “understand” what a helmet looks like.
+### ⚠️ What This Means
 
-⚠️ If a person wears a helmet without a vest, the model might miss it.
+While the model still **predicts helmets correctly**, the internal reasoning may not be reliable:
 
-⚠️ It may even falsely predict a helmet just because a vest is present.
+- ⚠️ It may not truly “understand” what a helmet looks like.  
+- ⚠️ It could **fail to detect helmets** if the vest is absent.  
+- ⚠️ It might even **falsely detect a helmet** when only a vest is present.
 
-This kind of shortcut learning — where the model uses co-occurring but irrelevant features — is common in deep learning and a key motivation behind using Explainable AI tools.
+---
+
+### 🧠 Why Explainability Matters
+
+This kind of **shortcut learning** — where the model depends on frequently co-occurring but **irrelevant features** — is a well-known behavior in deep learning.  
+Using **Explainable AI techniques like Grad-CAM** helps uncover these hidden dependencies and build **trustworthy, interpretable AI systems**, especially in safety-critical environments.
 
 
 ## Installation
