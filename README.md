@@ -84,23 +84,23 @@ In a large number of predictions, the model doesn't focus solely on the helmet. 
 
 ### 🧠 Why This Happens
 
-🟡 Helmets and vests often appear together in the training data.  
-🟡 The model has learned to associate **vests as a strong context cue** for helmet presence.  
-🟡 As a result, it sometimes **relies more on the vest** than the helmet itself to make its decision.
+- Helmets and vests often appear together in the training data.  
+- The model has learned to associate **vests as a strong context cue** for helmet presence.  
+- As a result, it sometimes **relies more on the vest** than the helmet itself to make its decision.
 
 ---
 
-### 💡 What This Means
+### ⚠️ What This Means
 
 While the model still **predicts helmets correctly**, the internal reasoning may not be reliable:
 
-⚠️ It may not truly “understand” what a helmet looks like.  
-⚠️ It could **fail to detect helmets** if the vest is absent.  
-⚠️ It might even **falsely detect a helmet** when only a vest is present.
+- It may not truly “understand” what a helmet looks like.  
+- It could **fail to detect helmets** if the vest is absent.  
+- It might even **falsely detect a helmet** when only a vest is present.
 
 ---
 
-### 👇 Why Explainability Matters
+### 💡 Why Explainability Matters
 
 This kind of **shortcut learning** — where the model depends on frequently co-occurring but **irrelevant features** — is a well-known behavior in deep learning.  
 Using **Explainable AI techniques like Eigen-CAM** helps uncover these hidden dependencies and build **trustworthy, interpretable AI systems**, especially in safety-critical environments.
