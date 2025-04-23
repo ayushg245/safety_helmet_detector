@@ -44,7 +44,7 @@ Explainability helps us visualize what parts of the image the model is actually 
 
 2. Shadows or colors that consistently co-occur with helmets in training data
 
-We tried to dig deep in the last three layers of the model and here are the outputs. 
+**We dug deep in the last three layers of the model and here are the outputs.**
 
 <h3 align="center">🔍 Visualizing Model Focus with EigenCAM (Last Layer)</h3>
 
@@ -74,7 +74,28 @@ We tried to dig deep in the last three layers of the model and here are the outp
   <img src="output/Third Last Layer/eigen_cam_thirdlast_layer_4.jpg" width="22%" />
 </p>
 
+One of the most revealing insights from applying Explainable AI techniques like EigenCAM was observing where the model actually pays attention when detecting safety helmets.
 
+👀 What We Found:
+In a large number of predictions, the model doesn't focus solely on the helmet. Instead, the activation maps frequently light up high-visibility safety vests worn by the same individuals.
+
+**This happens because:**
+
+-> Helmets and vests often appear together in training data.
+
+-> The model has learned to associate vests as a strong context cue for helmet presence.
+
+-> As a result, it sometimes relies more on the vest than the helmet itself to make its decision.
+
+✅ The model still predicts helmets correctly, but...
+
+⚠️ It may not truly “understand” what a helmet looks like.
+
+⚠️ If a person wears a helmet without a vest, the model might miss it.
+
+⚠️ It may even falsely predict a helmet just because a vest is present.
+
+This kind of shortcut learning — where the model uses co-occurring but irrelevant features — is common in deep learning and a key motivation behind using Explainable AI tools.
 
 
 ## Installation
@@ -104,13 +125,18 @@ python helmet_detector.py
 ```
 3. Enter the path to your video file when prompted (data/video.mp4)
 4. Press 'q' to quit the detection window
+5. After running the python detector, to dive deep into what model sees run the following script, which uses stored images from data folder.
+```bash
+python eigencam.py
+```
+6. To experiment, you can add more images in the data folder. 
 
 ## Output
 
 The system provides:
-1. Real-time video display with detections
+1. Real-time video display with detections with bounding boxes and confidence labels
 2. Processed video saved to output/ directory
-3. Bounding boxes and confidence labels shown for detected objects
+3. For selected frames, Grad-CAM or EigenCAM heatmaps are generated to show where the model is focusing its attention.
 
 
 ## Contributing
@@ -127,3 +153,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - OpenCV for computer vision capabilities
 - PyTorch for deep learning framework
 - XAI research community for explainability concepts
+- [Eigen Cam Tutorial](https://jacobgil.github.io/pytorch-gradcam-book/EigenCAM%20for%20YOLO5.html)
+
+
