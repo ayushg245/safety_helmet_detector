@@ -1,22 +1,16 @@
-# Safety Helmet Detection with Explainable AI
+# Does the Model Really See the Safety Helmet? A Deep Dive into Explainable Detection
 
-A computer vision system that detects safety helmets in video streams using YOLOv8m, enhanced with Explainable AI (XAI) components to improve trust and transparency in model decisions.
-
+This project combines YOLOv8m-based helmet detection with Explainable AI to not only detect safety helmets in video streams, but also reveal how and why the model makes its predictions.
 
 ---
 
-## 📌 Project Overview
-
-This system performs real-time safety helmet detection in videos using a YOLOv3-based deep learning model. It incorporates Explainable AI (XAI) components to offer interpretability through visual feedback and confidence scores.
-
 ### Key Highlights
-- Detects helmets and humans with bounding boxes and confidence levels
-- Efficient processing: analyzes every 10th frame
-- Real-time visualization with minimal performance drop
-- Explainable outputs to build user trust
+- Utilizes the YOLOv8m model for accurate, real-time detection of safety helmets in video frames.
+- Enhances model transparency by visualizing which regions of the image influenced detection decisions.
+- Processes live or recorded video input to detect helmets frame by frame.
+- Designed to support use cases in industrial safety, construction monitoring, and compliance verification.
 
 ## 🎥 Input & Output
- 
 Place your video in the `data` directory:
 
 Processed video is saved in the `output` directory:
@@ -33,40 +27,41 @@ The processed video with safety helmet detections is saved in the `output` direc
 
 ![Output Video](output/safety_helmet_detection.mp4)
 
-## ⚙️ Features
-
-### Detection
 - YOLOv8m-based model trained for helmet detection
 - Bounding box colors:
   - 🟦 Blue: safety helmets
 - Confidence scores displayed for each detection
-- Only displays frames where humans are detected
-
-### Performance
-- Processes every 10th frame to balance speed and accuracy
-- Runs on both CPU and GPU (CUDA-supported)
-- Uses a confidence threshold of 0.35 for reliable detection
 
 ---
 
 ## 🧠 Explainable AI (XAI) Components
 
-### Model Interpretability
-- Visual bounding boxes
-- Confidence scores on each detection
-- Frame-level feedback for decision reasoning
+On a normal detection, it may seem like the model is doing exactly what it should — identifying and localizing objects like safety helmets with high confidence. This creates the impression that the model is “seeing” the helmet and making the right decision. But when we look inside the model using Explainable AI techniques like Grad-CAM or EigenCAM, a lot of hidden behavior is revealed.
 
-### Transparency & Trust
-- Clear labeling of detection results
-- Consistent detection patterns
-- Easy-to-understand visual output
+Explainability helps us visualize what parts of the image the model is actually using to make its predictions. Surprisingly, these attention maps often show the model focusing on:
 
-## 🛠️ Technical Overview
+1. Nearby clothing like vests or faces
 
-### Architecture
-- YOLOv8m-based object detection
-- Custom-trained for helmet detection
-- Lightweight, efficient Python script
+2. Shadows or colors that consistently co-occur with helmets in training data
+
+We tried to dig deep in the last three layers of the model and here are the outputs. 
+
+### Last Layer:
+<table>
+  <tr>
+    <td><img src="output/Last Layer Output/eigen_cam_last_layer_1.jpg" width="22%"></td>
+    <td><img src="output/Last Layer Output/eigen_cam_last_layer_2.jpg" width="22%"></td>
+    <td><img src="output/Last Layer Output/eigen_cam_last_layer_3.jpg" width="22%"></td>
+    <td><img src="output/Last Layer Output/eigen_cam_last_layer_4.jpg" width="22%"></td>
+  </tr>
+  <tr align="center">
+    <td>Frame 1</td>
+    <td>Frame 2</td>
+    <td>Frame 3</td>
+    <td>Frame 4</td>
+  </tr>
+</table>
+
 
 
 ## Installation
