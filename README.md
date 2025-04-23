@@ -55,7 +55,6 @@ We tried to dig deep in the last three layers of the model and here are the outp
   <img src="output/Last Layer Output/eigen_cam_last_layer_4.jpg" width="22%" />
 </p>
 
-<h3 align="center">🔍 Visualizing Model Focus with EigenCAM (Second Last Layer)</h3>
 
 <h3 align="center">🔍 Visualizing Model Focus with EigenCAM (Second Last Layer)</h3>
 
@@ -69,10 +68,10 @@ We tried to dig deep in the last three layers of the model and here are the outp
 <h3 align="center">🔍 Visualizing Model Focus with EigenCAM (Third Last Layer)</h3>
 
 <p align="center">
-  <img src="output/Third Last Layer Output/eigen_cam_thirdlast_layer_1.jpg" width="22%" />
-  <img src="output/Third Last Layer Output/eigen_cam_thirdlast_layer_2.jpg" width="22%" />
-  <img src="output/Third Last Layer Output/eigen_cam_thirdlast_layer_3.jpg" width="22%" />
-  <img src="output/Third Last Layer Output/eigen_cam_thirdlast_layer_4.jpg" width="22%" />
+  <img src="output/Third Last Layer/eigen_cam_thirdlast_layer_1.jpg" width="22%" />
+  <img src="output/Third Last Layer/eigen_cam_thirdlast_layer_2.jpg" width="22%" />
+  <img src="output/Third Last Layer/eigen_cam_thirdlast_layer_3.jpg" width="22%" />
+  <img src="output/Third Last Layer/eigen_cam_thirdlast_layer_4.jpg" width="22%" />
 </p>
 
 
